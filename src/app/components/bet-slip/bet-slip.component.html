@@ -1,0 +1,18 @@
+<section class="flex-container">
+    <ul class="conjuntoBolas">
+        <li *ngFor="let bola of arrayBolasSeleccionadas">
+            <div id="bola-{{bola.id}}" class="bola-{{bola.color}}">{{bola.id}}</div>
+        </li>
+    </ul>
+    <div class="imputCompleto">
+        <label class="numero">{{seleccion}}x</label>
+        <input class="importe" type="number" [(ngModel)]="importe" name="importe" min="5">
+        <button class="anyadir" (click)="anyadirImporte()">Ok</button>
+    </div>
+    <div class="total">
+        <span>Total: {{total}}€</span>
+    </div>
+    <div>
+        <button class="botonPremio" (click)="sacarBolaPremiada()" [disabled]="disabledButton">Place bet</button>
+    </div>
+</section>

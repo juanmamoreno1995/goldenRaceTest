@@ -1,0 +1,22 @@
+<div *ngIf="!mostrar">
+    <h1>Numbers</h1>
+    <ul class="conjuntoBolas">
+        <li *ngFor="let bola of arrayBolas">
+            <div id="bola-{{bola.id}}" class="bola-{{bola.color}}" (click)="selectedBall(bola)">{{bola.id}}</div>
+        </li>
+    </ul>
+    <div>
+        <button (click)="limpiarArray()">Clear selection</button>
+    </div>
+</div>
+<div *ngIf="mostrar" class="modal">
+    <span class="result">Result</span>
+    <ul>
+        <li>
+            <div id="bolaGanadora" class="bola-{{bolaGanadora?.color}}">{{bolaGanadora?.id}}</div>
+        </li>
+    </ul>
+    <span *ngIf="ganador" style="color:#00ff2a" class="win">You Win!</span>
+    <span *ngIf="!ganador" style="color:#FF0000" class="lose">You Lose!</span>
+    <button (click)="cerrar()" class="botonCerrar">Cerrar</button>
+</div>

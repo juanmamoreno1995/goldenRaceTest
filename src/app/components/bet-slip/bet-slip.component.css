@@ -1,0 +1,80 @@
+ul {
+  list-style: none;
+  margin-bottom: 20%;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul li div {
+  border-radius: 50%;
+  font-weight: bold;
+  line-height: 30px;
+  margin-right: 5px;
+  text-align: center;
+  width: 30px;
+}
+
+.bola-rojo {
+  background: red;
+}
+
+.bola-beige {
+  background: #fce1e1;
+}
+
+.bola-verde {
+  background: #5EA226;
+}
+
+.bola-rosa {
+  background: #f18de1;
+}
+
+.bola-amarillo {
+  background: #f5c526;
+}
+
+.bola-azul {
+  background: #7fbcf5dc;
+}
+
+.bola-vacia {
+  background: #b9b7b773;
+  color: transparent;
+}
+
+.botonPremio {
+  color: white;
+  background-color: #2c6ce2;
+  width: -webkit-fill-available;
+  border: none;
+  height: 40px;
+  font-size: 20px;
+}
+
+.numero {
+  font-weight: bold;
+  border: solid 1px #cdc9c9;
+  background-color: #cdc9c9;
+}
+
+.importe {
+  text-align: right;
+  width: 20%;
+  margin-right: 2%;
+}
+
+.anyadir {
+  background-color: #2c6ce2;
+  color: white;
+}
+
+.total {
+  margin-top: 25%;
+  margin-bottom: 2%;
+  font-size: 25px;
+  font-weight: bold;
+}
+/*# sourceMappingURL=bet-slip.component.css.map */
