@@ -72,9 +72,10 @@ export class BetSlipComponent implements OnInit {
     let numPremiado = Math.floor((Math.random() * (10 - 1 + 1)) + 1)
     this.ballService.comprobarGanador.emit({
       numPremiado: numPremiado,
-      ganador: await this.checkExist(numPremiado - 1),
+      ganador: await this.checkExist(numPremiado),
       premio: this.total * 1.5
     })
+    this.disabledButton = true;
   }
 
   checkLimpieza(data: boolean): void {
