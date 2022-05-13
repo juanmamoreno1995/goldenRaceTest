@@ -17,6 +17,7 @@
         </li>
     </ul>
     <span *ngIf="ganador" style="color:#00ff2a" class="win">You Win!</span>
+    <span *ngIf="ganador" class="result">Importe premiado: {{premio}}</span>
     <span *ngIf="!ganador" style="color:#FF0000" class="lose">You Lose!</span>
     <button (click)="cerrar()" class="botonCerrar">Cerrar</button>
 </div>

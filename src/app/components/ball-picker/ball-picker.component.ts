@@ -14,6 +14,7 @@ export class BallPickerComponent implements OnInit {
   bolaGanadora: Ball | undefined;
   mostrar: boolean = false;
   ganador: boolean | undefined;
+  premio: number = 0;
 
   constructor(private ballService: BallServiceService) { }
 
@@ -52,7 +53,9 @@ export class BallPickerComponent implements OnInit {
     console.log(data);
     this.bolaGanadora = this.arrayBolas[data.numPremiado-1];
     this.ganador = data.ganador;
+    this.premio = data.premio;
     this.mostrar = true;
+    
   }
 
   cerrar():void{
