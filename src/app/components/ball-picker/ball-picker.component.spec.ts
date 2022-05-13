@@ -22,4 +22,16 @@ describe('BallPickerComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('Comprobar variables inicializadas', () => {
+    fixture = TestBed.createComponent(BallPickerComponent);
+    component = fixture.componentInstance;
+    expect(component.arrayColores.length).toEqual(6)
+    expect(component.arrayBolas.length).toEqual(0)
+    expect(component.bolaGanadora).toBeUndefined(true);
+    expect(component.mostrar).not.toBeTrue()
+    expect(component.premio).toEqual(0)
+    fixture.detectChanges();
+    expect(component.arrayBolas.length).toEqual(10)
+  });
 });
